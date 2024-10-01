@@ -1,0 +1,22 @@
+.logo {
+  display: flex;
+  position: relative;
+
+  .icon {
+    .ellipseBlue {
+      position: absolute;
+      left: 0;
+    }
+
+    .ellipseWhite {
+      position: absolute;
+      left: 14px;
+    }
+  }
+
+  .title {
+    color: #FFFFFF;
+    font-weight: 600;
+    margin-left: 45px;
+  }
+}

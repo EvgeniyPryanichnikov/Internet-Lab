@@ -1,0 +1,23 @@
+.item {
+  padding: 16px 0;
+  border-bottom: 1px solid #ECEFF2;
+
+  .questionContainer {
+    display: grid;
+    grid-template-columns: 1fr 24px;
+    column-gap: 20px;
+
+    .text {
+      font-weight: 600;
+      text-align: start;
+    }
+  }
+
+  .answer {
+    font-size: 16px;
+    line-height: 28px;
+    color: #5E646A;
+    text-align: start;
+    margin-top: 16px;
+  }
+}

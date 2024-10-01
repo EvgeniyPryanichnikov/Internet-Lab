@@ -1,0 +1,29 @@
+.blockThree {
+  padding: 0 16px 56px 16px;
+  .imageBlock {
+    position: relative;
+    // width: 288px;
+    margin-bottom: 27px;
+    background: url('../../../icons/3blockAuto.svg');
+    .icon{
+      left: 0;
+      z-index: 2;
+    }
+  }
+
+  .textBlock {
+    display: grid;
+    gap: 27px;
+
+    .title {
+      font-size: 20px;
+    }
+
+    .text {
+      font-size: 16px;
+      line-height: 28px;
+      color: #5E646A;
+    }
+  }
+} 
+  
