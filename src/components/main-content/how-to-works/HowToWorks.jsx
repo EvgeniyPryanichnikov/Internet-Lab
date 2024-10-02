@@ -16,18 +16,20 @@ const HowToWorks = () => {
 
   return (
     <section className={s.stepsBlock}>
-      <h2>
+      <h2 className={s.title}>
         Как это работает
       </h2>
 
-      {steps.map(step => (
-        <StepItem 
-          key={step.title} 
-          title={step.title}
-          icon={step.icon}
-          info={step.info}/>
-        ))
-      }
+      <div className={s.steps}>
+        {steps.map(step => (
+          <StepItem 
+            key={step.title}
+            title={step.title}
+            icon={step.icon}
+            info={step.info}/>
+          ))
+        }
+      </div>
     </section>
   )
 }

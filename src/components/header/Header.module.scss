@@ -10,6 +10,24 @@
 	background-repeat: no-repeat;
 	background-position: center center;
 
+  @media screen and (min-width: 375px){
+    height: 596px;
+    row-gap: 92px;
+    background: url('../../../public/images/head375.png');
+  }
+
+  @media screen and (min-width: 768px){
+    height: 1024px;
+    row-gap: 317px;
+    background: url('../../../public/images/head768.png');
+  }
+
+  @media screen and (min-width: 1920px){
+    height: 960px;
+    row-gap: 233px;
+    background: url('../../../public/images/head1920.png');
+  }
+
   &::after {
     content: "";
     height: 509px;
@@ -21,7 +39,20 @@
     bottom: 0;
     background-color: #2A6CEA;
     position: absolute;
+
+    @media screen and (min-width: 375px){
+      height: 596px;
+    }
+
+    @media screen and (min-width: 768px){
+      height: 1024px;
+    }
+
+    @media screen and (min-width: 1920px){
+      height: 960px;
+    }
   }
+
   .top, .content {
     position: relative;
     z-index: 2;
@@ -31,20 +62,51 @@
     height: 52px;
     display: flex;
     justify-content: space-between;
+
+    
+    @media screen and (min-width: 1920px){
+      padding: 0 352px;
+    }
   }
 
   .content {
+    width: 252px;
     display: grid;
+    align-self: center;
     row-gap: 26px;
+
+    @media screen and (min-width: 768px){
+      width: 476px;
+      gap: 40px;
+    }
+
+    @media screen and (min-width: 1920px){
+      width: 740px;
+      gap: 92px;
+    }
 
     .title {
       font-size: 24px;
       font-weight: 600;
       color: #fff;
+      margin-bottom: 10px;
+
+      @media screen and (min-width: 768px){
+        font-size: 32px;
+        margin-bottom: 17px;
+      }
+
+      @media screen and (min-width: 1920px){
+        font-size: 52px;
+      }
     }
     
     .subTitle {
       color: #fff;
+
+      @media screen and (min-width: 1920px){
+        font-size: 18px;
+      }
     }
 
     .btn {

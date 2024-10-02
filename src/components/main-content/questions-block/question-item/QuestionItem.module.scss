@@ -2,6 +2,10 @@
   padding: 16px 0;
   border-bottom: 1px solid #ECEFF2;
 
+  @media screen and (min-width: 1920px){
+    padding: 24px 0;
+  }
+
   .questionContainer {
     display: grid;
     grid-template-columns: 1fr 24px;

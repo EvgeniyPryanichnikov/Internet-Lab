@@ -1,10 +1,36 @@
 .blockThree {
   padding: 0 16px 56px 16px;
+
+  @media screen and (min-width: 768px){
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 24px;
+  }
+
+  @media screen and (min-width: 1920px){
+    margin: 0 auto;
+    max-width: 1216px;
+    align-items: center;
+  }
+
   .imageBlock {
     position: relative;
     // width: 288px;
     margin-bottom: 27px;
     background: url('../../../icons/3blockAuto.svg');
+
+    @media screen and (min-width: 375px){
+      background: url('../../../icons/truck375.svg');
+    }
+
+    @media screen and (min-width: 768px){
+     margin-bottom: 0;
+    }
+
+    @media screen and (min-width: 1920px){
+      background: url('../../../icons/truck1920.svg');
+    }
+
     .icon{
       left: 0;
       z-index: 2;
@@ -15,14 +41,30 @@
     display: grid;
     gap: 27px;
 
+    @media screen and (min-width: 1920px){
+      height: 198px;
+    }
+
     .title {
       font-size: 20px;
+
+      @media screen and (min-width: 768px){
+        text-align: start;
+      }
+
+      @media screen and (min-width: 1920px){
+        font-size: 32px;
+      }
     }
 
     .text {
       font-size: 16px;
       line-height: 28px;
       color: #5E646A;
+
+      @media screen and (min-width: 768px){
+        text-align: start;
+      }
     }
   }
 } 

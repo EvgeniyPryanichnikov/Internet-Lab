@@ -1,11 +1,17 @@
 import s from './BlockThree.module.scss'
 import { ReactComponent as BlockImage } from '../../../icons/3block.svg'
+import { ReactComponent as MiddleImage } from '../../../icons/man375.svg'
+import { ReactComponent as BigImage } from '../../../icons/man1920.svg'
+import useWindowDimensions  from '../../../hooks/WindowDimensions'
 
 const BlockThree = () => {
+  const { width } = useWindowDimensions();
   return (
     <section className={s.blockThree}>
       <div className={s.imageBlock}>
-        <BlockImage className={s.icon}/>
+        {width < 375 && <BlockImage className={s.icon}/>}
+        {width >= 375 && width < 1920 && <MiddleImage className={s.icon}/>}
+        {width >= 1920 && <BigImage className={s.icon}/>}
       </div>
 
       <div className={s.textBlock}>

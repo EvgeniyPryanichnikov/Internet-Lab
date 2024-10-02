@@ -13,13 +13,16 @@ const Header = () => {
       </div>
 
       <div className={s.content}>
-        <h1 className={s.title}>
-          Говорят, никогда не поздно сменить профессию
-        </h1>
+        <div>
+          <h1 className={s.title}>
+            Говорят, никогда не поздно сменить профессию
+          </h1>
 
-        <p className={s.subTitle}>
-          Сделай круто тестовое задание и у тебя получится
-        </p>
+          <p className={s.subTitle}>
+            Сделай круто тестовое задание и у тебя получится
+          </p>
+        </div>
+        
 
         <button className={s.btn}>Проще простого!</button>
       </div>

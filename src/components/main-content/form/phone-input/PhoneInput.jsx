@@ -2,10 +2,10 @@ import React, { useState }  from "react"
 import { useSelector } from "react-redux"
 import { ReactComponent as CheckIcon } from '../../../../icons/check.svg'
 import { ReactComponent as CancelIcon } from '../../../../icons/cancel.svg'
-import s from './NameInput.module.scss'
+import s from './PhoneInput.module.scss'
 
-const NameInput = ({label, handleNameInput}) => {
-  const { name } = useSelector((state => state.formData))
+const PhoneInput = ({handlePhoneInput}) => {
+  const { phone } = useSelector((state => state.formData))
 
   const [input, setInput] = useState('')
   const [inputDirty, setInputDirty] = useState(false)
@@ -16,35 +16,35 @@ const NameInput = ({label, handleNameInput}) => {
       setInputDirty(false)
     } else {
       // setInputDirty(true)
-      // setInputError('* Это обязательное поле')
     }
   }
 
   function onInputChange(e) {
 		setInput(e.target.value)
-    const re = /^[а-яё]+(?:[ -]{1}[а-яё]*)?$/i
+    const re = /^((\+7|7|8)+([0-9]){10})$/
 
     if (!re.test(String(e.target.value).toLowerCase())) {
       setInputDirty(true)
-      setInputError('не корректный ввод')
+      setInputError('Не корректный ввод')
     } else {
       setInputDirty(false)
       setInputError('')
-      handleNameInput(e.target.value)
+      handlePhoneInput(e.target.value)
     } 
 
     if (!e.target.value) {
-      handleNameInput('')
+      handlePhoneInput(null)
     }
 	}
+
   return (
     <>
-			<div className={s.nameInput} >
+			<div className={s.phoneInput}>
         <input 
           className={s.input + ((inputDirty && inputError)  ? ' ' + s.errorBorder : '')}
           onBlur={() => blurHandler()}
           value={input}
-          placeholder="Имя"
+          placeholder='Телефон'
           onChange={e => onInputChange(e)}
           type="text" 
         />
@@ -52,9 +52,9 @@ const NameInput = ({label, handleNameInput}) => {
         {inputDirty && inputError ? <CancelIcon className={s.icon} /> : !inputDirty && !inputError ? <CheckIcon className={s.icon}/> : null}
 
         {(inputDirty && inputError) && <div className={s.error}>{inputError}</div>}
-      </div> 
+      </div>
 		</>
   )
 }
 
-export default NameInput
+export default PhoneInput
