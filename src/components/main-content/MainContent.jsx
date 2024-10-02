@@ -4,6 +4,8 @@ import BlockThree from './block-three/BlockThree'
 import QuestionsBlock from './questions-block/QuestionsBlock'
 import ArticlesBlock from './articles-block/ArticlesBlock'
 import Form from './form/Form'
+import Slider from './slider/Slider'
+import slides from '../../data/slides'
 
 const MainContent = () => {
   return (
@@ -11,6 +13,8 @@ const MainContent = () => {
       <HowToWorks />
 
       <BlockThree />
+
+      <Slider slides={slides}/>
 
       <QuestionsBlock />
 
