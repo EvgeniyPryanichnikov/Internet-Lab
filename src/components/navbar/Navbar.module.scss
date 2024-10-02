@@ -1,0 +1,12 @@
+.navbar {
+  display: flex;
+  gap: 24px;
+
+  .item {
+    color: #fff;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

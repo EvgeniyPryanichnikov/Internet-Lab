@@ -5,7 +5,7 @@ import s from './Form.module.scss'
 import NameInput from './text-input/NameInput'
 import PhoneInput from './phone-input/PhoneInput'
 import CheckboxInput from "./checkbox-input/CheckboxInput"
-import {getSubscription} from '../../../api/subscription'
+import { getSubscription } from '../../../api/subscription'
 
 
 const Form = () => {
@@ -45,7 +45,7 @@ const Form = () => {
 
 
   return (
-    <form className={s.form}>
+    <form className={s.form} id='form'>
       <h2 className={s.title}>
         Отправь форму
       </h2>

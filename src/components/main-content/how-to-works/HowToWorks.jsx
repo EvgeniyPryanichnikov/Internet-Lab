@@ -15,7 +15,7 @@ const HowToWorks = () => {
   ]
 
   return (
-    <section className={s.stepsBlock}>
+    <section className={s.stepsBlock} id='how-to-work'>
       <h2 className={s.title}>
         Как это работает
       </h2>

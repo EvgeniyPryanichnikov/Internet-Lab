@@ -30,6 +30,9 @@ input::-webkit-input-placeholder {
   font-size: 18px;
 }
 
+a, a:link, a:visited { text-decoration: none; }
+a:hover { text-decoration: none; }
+
 .App {
   text-align: center;
 }

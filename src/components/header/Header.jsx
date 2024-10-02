@@ -1,15 +1,18 @@
 import s from './Header.module.scss'
 import Logo from '../logo/Logo'
 import Burger from '../burger/Burger'
-// import Navbar from '../navbar/Navbar'
+import useWindowDimensions  from '../../hooks/WindowDimensions'
+import Navbar from '../navbar/Navbar'
 
 const Header = () => {
+  const { width } = useWindowDimensions()
+
   return (
     <header className={s.header}>
       <div className={s.top}>
         <Logo />
 
-        <Burger />
+        {width >= 1920 ? <Navbar /> : <Burger />}
       </div>
 
       <div className={s.content}>
@@ -26,7 +29,6 @@ const Header = () => {
 
         <button className={s.btn}>Проще простого!</button>
       </div>
-      {/* <Navbar/> */}
     </header>
   )
 }

@@ -4,7 +4,7 @@ import questions from '../../../data/questions'
 
 const QuestionsBlock = () => {
   return (
-    <section className={s.questionsList}>
+    <section className={s.questionsList} id='questions'>
       <h2 className={s.title}>
         Вопросы и ответы
       </h2>

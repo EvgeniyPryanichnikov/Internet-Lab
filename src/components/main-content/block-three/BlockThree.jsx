@@ -5,9 +5,9 @@ import { ReactComponent as BigImage } from '../../../icons/man1920.svg'
 import useWindowDimensions  from '../../../hooks/WindowDimensions'
 
 const BlockThree = () => {
-  const { width } = useWindowDimensions();
+  const { width } = useWindowDimensions()
   return (
-    <section className={s.blockThree}>
+    <section className={s.blockThree} id='block-three'>
       <div className={s.imageBlock}>
         {width < 375 && <BlockImage className={s.icon}/>}
         {width >= 375 && width < 1920 && <MiddleImage className={s.icon}/>}

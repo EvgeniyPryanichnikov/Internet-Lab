@@ -2,7 +2,7 @@ import s from './Logo.module.scss'
 import { ReactComponent as Ellipse1 } from '../../icons/Ellipse1.svg'
 import { ReactComponent as Ellipse2 } from '../../icons/Ellipse2.svg'
 
-const Logo = () => {
+const Logo = ({blackTitle}) => {
   return (
     <div className={s.logo}>
       <div className={s.icon}>
@@ -11,7 +11,7 @@ const Logo = () => {
       </div>
       
 
-      <span className={s.title}>
+      <span className={s.title && blackTitle ? s.blackTitle : s.title}>
         testLab
       </span>
     </div>

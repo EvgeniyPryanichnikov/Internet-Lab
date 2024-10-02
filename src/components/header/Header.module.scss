@@ -54,12 +54,12 @@
   }
 
   .top, .content {
-    position: relative;
+    // position: relative;
     z-index: 2;
   }
 
   .top {
-    height: 52px;
+    padding: 0 0 26px 0;
     display: flex;
     justify-content: space-between;
 
