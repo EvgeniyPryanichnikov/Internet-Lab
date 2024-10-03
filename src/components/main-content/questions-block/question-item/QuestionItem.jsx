@@ -27,4 +27,4 @@ const QuestionItem = ({ answer, question }) => {
   )
 }
 
-export default QuestionItem
+export default QuestionItem 
