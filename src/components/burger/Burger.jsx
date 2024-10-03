@@ -19,7 +19,7 @@ const Burger = () => {
   }
 
   return (
-    <div>
+    <div className={s.test}>
       <BurgerIcon onClick={handleShowMenu}/>
 
       {showMenu && <div className={s.modalMenu}>

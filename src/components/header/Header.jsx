@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <header className={s.header}>
       <div className={s.top}>
-        <Logo />
+        <Logo/>
 
         {width >= 1920 ? <Navbar /> : <Burger />}
       </div>

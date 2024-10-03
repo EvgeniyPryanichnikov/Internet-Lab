@@ -10,7 +10,7 @@ const QuestionItem = ({ answer, question }) => {
   }
 
   return (
-    <div className={s.item}>
+    <div className={s.item} onClick={handleShowAnswer}>
       <div className={s.questionContainer}>
         <div className={s.text}>
           {question}

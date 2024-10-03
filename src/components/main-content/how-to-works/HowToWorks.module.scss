@@ -22,14 +22,14 @@
   }
 
   .steps {
+    display: grid;
+    gap: 32px;
+
     @media screen and (min-width: 768px){
-      display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 32px;
     }
 
     @media screen and (min-width: 1920px){
-      display: grid;
       grid-template-columns: repeat(4, 1fr);
     }
   }
