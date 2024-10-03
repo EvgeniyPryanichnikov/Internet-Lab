@@ -6,22 +6,26 @@ const Slider = ({ slides }) => {
 
     const nextSlide = () => {
         setCurrentIndex((prevIndex) =>
-            prevIndex === slides.length - 1 ? 0 : prevIndex + 1
+          prevIndex === slides.length - 1 ? 0 : prevIndex + 1
         );
     };
 
     const prevSlide = () => {
         setCurrentIndex((prevIndex) =>
-            prevIndex === 0 ? slides.length - 1 : prevIndex - 1
+          prevIndex === 0 ? slides.length - 1 : prevIndex - 1
         );
     };
 
     const goToSlide = (index) => {
-        setCurrentIndex(index);
+      setCurrentIndex(index);
     };
 
     return (
         <section className={s.slider}>
+          <h2>
+            Отзывы
+          </h2>
+
           <div className={s.slides} style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
             {slides.map(slide => (
               <div className={s.slide} key={slide.id}>

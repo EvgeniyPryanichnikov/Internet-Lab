@@ -4,8 +4,10 @@ import BlockThree from './block-three/BlockThree'
 import QuestionsBlock from './questions-block/QuestionsBlock'
 import ArticlesBlock from './articles-block/ArticlesBlock'
 import Form from './form/Form'
-import Slider from './slider/Slider'
+
+// import Slider from './slider/Slider'
 import slides from '../../data/slides'
+import SimpleSlider from './slider-carusel/SliderCarusel'
 
 const MainContent = () => {
   return (
@@ -14,7 +16,9 @@ const MainContent = () => {
 
       <BlockThree />
 
-      <Slider slides={slides}/>
+      {/* <Slider slides={slides}/> */}
+
+      <SimpleSlider slides={slides}/>
 
       <QuestionsBlock />
 
